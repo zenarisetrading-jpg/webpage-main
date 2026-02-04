@@ -1,4 +1,5 @@
-name = "adpulse-webpage"
+# wrangler.toml
+name = 'webpage-main'
 compatibility_date = "2024-02-04"
 
 [assets]
