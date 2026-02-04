@@ -4,3 +4,7 @@ compatibility_date = "2024-02-04"
 
 [assets]
 directory = "."
+
+[[routes]]
+pattern = "saddl.io"
+custom_domain = true
