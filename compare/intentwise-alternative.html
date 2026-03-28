@@ -13,112 +13,98 @@
     <meta property="og:url" content="https://saddl.io/compare/intentwise-alternative.html">
     <meta property="og:site_name" content="Saddl AdPulse">
     <meta property="og:image" content="https://saddl.io/assets/og-image.png">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles-v2.css">
 </head>
 
-<body class="bg-white text-slate-900">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="../index.html" class="text-2xl font-bold text-slate-900">SADDL</a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="../compare.html" class="text-[#2A8EC9] font-medium text-sm">Compare</a>
-                    <a href="../features.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Features</a>
-                    <a href="../how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">How It Works</a>
-                    <a href="../agencies.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Agencies</a>
-                    <a href="../about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">About</a>
-                    <a href="../pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Pricing</a>
-                    <a href="../faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">FAQ</a>
-                    <a href="../audit.html" class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8]">Run Free PPC Audit</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-slate-100 pt-4 flex flex-col gap-4">
-                <a href="../compare.html" class="text-[#2A8EC9] font-medium text-sm block">Compare</a>
-                <a href="../features.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Features</a>
-                <a href="../how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">How It Works</a>
-                <a href="../agencies.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Agencies</a>
-                <a href="../about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">About</a>
-                <a href="../pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Pricing</a>
-                <a href="../faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">FAQ</a>
-                <a href="https://dashboard.saddl.io/" class="flex justify-center items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors">Login</a>
-                <a href="../audit.html" class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8] text-center block">Run Free PPC Audit</a>
-            </div>
+    <nav class="nav-v2" id="nav">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">SADDL<span class="nav-logo-dot"></span></a>
+        <div class="nav-links">
+          <a href="../features.html">Features</a>
+          <a href="../how-it-works.html">How It Works</a>
+          <a href="../agencies.html">Agencies</a>
+          <a href="../pricing.html">Pricing</a>
+          <a href="../compare.html" style="color:var(--accent);">Compare</a>
         </div>
+        <div class="nav-actions">
+          <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
+          <a href="../audit.html" class="btn-primary-v2" style="padding:0.625rem 1.25rem;font-size:0.875rem;">Run Free Audit</a>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h16M3 11h16M3 16h16"/></svg>
+        </button>
+      </div>
+      <div class="nav-mobile-menu" id="nav-mobile-menu">
+        <a href="../features.html">Features</a>
+        <a href="../how-it-works.html">How It Works</a>
+        <a href="../agencies.html">Agencies</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../compare.html">Compare</a>
+        <div class="nav-mobile-actions">
+          <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content:center;">Login</a>
+          <a href="../audit.html" class="btn-primary-v2" style="justify-content:center;">Run Free Audit</a>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-sky-50/30">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-block bg-sky-100 text-[#2A8EC9] text-sm font-semibold px-4 py-2 rounded-full mb-6">Intentwise Alternative</div>
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6">Looking for an <span class="text-[#2A8EC9]">Intentwise Alternative?</span></h1>
-            <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">Intentwise brings solid Amazon analytics and reporting to PPC management. But analytics tells you what happened — counterfactual analysis tells you what would have happened without your changes. Saddl AdPulse does the latter.</p>
-            <div class="mt-10">
-                <a href="../audit.html" class="bg-[#2A8EC9] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[#2276A8] shadow-lg inline-block">Run Free PPC Audit</a>
+    <section class="section-hero">
+        <div class="container-v2" style="text-align:center;">
+            <span class="hero-badge">Intentwise Alternative</span>
+            <h1 class="headline-on-dark">Looking for an <span style="color:var(--accent);">Intentwise Alternative?</span></h1>
+            <p style="font-size:1.25rem;color:var(--text-on-dark-secondary);line-height:1.7;max-width:40rem;margin:1.5rem auto 0;">Intentwise brings solid Amazon analytics and reporting to PPC management. But analytics tells you what happened — counterfactual analysis tells you what would have happened without your changes. Saddl AdPulse does the latter.</p>
+            <div style="margin-top:2.5rem;">
+                <a href="../audit.html" class="btn-primary-v2">Run Free PPC Audit</a>
             </div>
         </div>
     </section>
 
     <!-- Comparison Table -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-slate-900 text-center mb-12">How They Compare</h2>
-            <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-700">
-                <div class="overflow-x-auto">
-                    <table class="w-full">
+    <section class="section-white">
+        <div class="container-v2">
+            <h2 style="text-align:center;margin-bottom:3rem;">How They Compare</h2>
+            <div style="background:#111113;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.08);">
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;">
                         <thead>
-                            <tr class="border-b border-slate-700">
-                                <th class="text-left p-5 text-slate-400 font-medium">Feature</th>
-                                <th class="text-center p-5 text-slate-300 font-semibold">Intentwise</th>
-                                <th class="text-center p-5 text-[#2A8EC9] font-semibold">Saddl AdPulse</th>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.1);">
+                                <th style="text-align:left;padding:1.25rem;font-weight:500;color:var(--text-on-dark-secondary);">Feature</th>
+                                <th style="text-align:center;padding:1.25rem;font-weight:600;color:var(--text-on-dark);">Intentwise</th>
+                                <th style="text-align:center;padding:1.25rem;font-weight:600;color:var(--accent);">Saddl AdPulse</th>
                             </tr>
                         </thead>
-                        <tbody class="text-sm">
-                            <tr class="border-b border-slate-700/50">
-                                <td class="p-5 text-slate-300 font-medium">Attribution method</td>
-                                <td class="p-5 text-center text-slate-400">Amazon analytics & reporting</td>
-                                <td class="p-5 text-center text-[#2A8EC9] font-semibold">Counterfactual analysis</td>
+                        <tbody style="font-size:0.875rem;">
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                                <td style="padding:1.25rem;font-weight:500;color:var(--text-on-dark);">Attribution method</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--text-on-dark-secondary);">Amazon analytics &amp; reporting</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--accent);font-weight:600;">Counterfactual analysis</td>
                             </tr>
-                            <tr class="border-b border-slate-700/50">
-                                <td class="p-5 text-slate-300 font-medium">Setup time</td>
-                                <td class="p-5 text-center text-slate-400">API integration required</td>
-                                <td class="p-5 text-center text-[#2A8EC9] font-semibold">10 minutes, easy setup</td>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                                <td style="padding:1.25rem;font-weight:500;color:var(--text-on-dark);">Setup time</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--text-on-dark-secondary);">API integration required</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--accent);font-weight:600;">10 minutes, easy setup</td>
                             </tr>
-                            <tr class="border-b border-slate-700/50">
-                                <td class="p-5 text-slate-300 font-medium">Counterfactual analysis</td>
-                                <td class="p-5 text-center text-red-400">✗ Not available</td>
-                                <td class="p-5 text-center text-[#2A8EC9] font-semibold">✓ Core feature</td>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                                <td style="padding:1.25rem;font-weight:500;color:var(--text-on-dark);">Counterfactual analysis</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--danger);">&#x2717; Not available</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--accent);font-weight:600;">&#x2713; Core feature</td>
                             </tr>
-                            <tr class="border-b border-slate-700/50">
-                                <td class="p-5 text-slate-300 font-medium">Transparency</td>
-                                <td class="p-5 text-center text-slate-400">Analytics dashboards, trend data</td>
-                                <td class="p-5 text-center text-[#2A8EC9] font-semibold">Every decision traced & verified</td>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                                <td style="padding:1.25rem;font-weight:500;color:var(--text-on-dark);">Transparency</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--text-on-dark-secondary);">Analytics dashboards, trend data</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--accent);font-weight:600;">Every decision traced &amp; verified</td>
                             </tr>
                             <tr>
-                                <td class="p-5 text-slate-300 font-medium">Pricing model</td>
-                                <td class="p-5 text-center text-slate-400">Subscription, agency-focused</td>
-                                <td class="p-5 text-center text-[#2A8EC9] font-semibold">Flat rate, free tier available</td>
+                                <td style="padding:1.25rem;font-weight:500;color:var(--text-on-dark);">Pricing model</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--text-on-dark-secondary);">Subscription, agency-focused</td>
+                                <td style="padding:1.25rem;text-align:center;color:var(--accent);font-weight:600;">Flat rate, free tier available</td>
                             </tr>
                         </tbody>
                     </table>
@@ -128,118 +114,119 @@
     </section>
 
     <!-- Where Intentwise Falls Short -->
-    <section class="py-20 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900">Where Intentwise Falls Short</h2>
-                <p class="text-slate-600 mt-3">Intentwise is a capable analytics platform. The limitation is a fundamental one: analytics describes history, it doesn't prove causation.</p>
+    <section class="section-off-white">
+        <div class="container-v2">
+            <div style="text-align:center;margin-bottom:3rem;">
+                <h2>Where Intentwise Falls Short</h2>
+                <p style="color:var(--text-secondary);margin-top:0.75rem;">Intentwise is a capable analytics platform. The limitation is a fundamental one: analytics describes history, it doesn't prove causation.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
-                    <div class="text-sm font-mono uppercase tracking-wider text-red-500 mb-4">Gap #1</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Analytics ≠ Causal Proof</h3>
-                    <p class="text-slate-600 leading-relaxed">Intentwise shows you what happened after your changes. But "sales improved after we made this change" is correlation, not causation. Without a counterfactual baseline, you don't know if your decision caused the result or just preceded it.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                <div class="problem-card">
+                    <span class="eyebrow" style="color:var(--danger);">Gap #1</span>
+                    <h3>Analytics ≠ Causal Proof</h3>
+                    <p>Intentwise shows you what happened after your changes. But "sales improved after we made this change" is correlation, not causation. Without a counterfactual baseline, you don't know if your decision caused the result or just preceded it.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
-                    <div class="text-sm font-mono uppercase tracking-wider text-red-500 mb-4">Gap #2</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Market Noise Pollutes Results</h3>
-                    <p class="text-slate-600 leading-relaxed">Amazon PPC results are noisy — seasonality, competitor stock-outs, ranking fluctuations all move your numbers. Analytics tools report the numbers. Only counterfactual measurement separates your signal from the market's noise.</p>
+                <div class="problem-card">
+                    <span class="eyebrow" style="color:var(--danger);">Gap #2</span>
+                    <h3>Market Noise Pollutes Results</h3>
+                    <p>Amazon PPC results are noisy — seasonality, competitor stock-outs, ranking fluctuations all move your numbers. Analytics tools report the numbers. Only counterfactual measurement separates your signal from the market's noise.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
-                    <div class="text-sm font-mono uppercase tracking-wider text-red-500 mb-4">Gap #3</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">No Decision-Level Tracking</h3>
-                    <p class="text-slate-600 leading-relaxed">Intentwise aggregates performance at the campaign and account level. It doesn't link individual optimization decisions — a specific bid change, a negative keyword addition — to the revenue outcomes that followed them.</p>
+                <div class="problem-card">
+                    <span class="eyebrow" style="color:var(--danger);">Gap #3</span>
+                    <h3>No Decision-Level Tracking</h3>
+                    <p>Intentwise aggregates performance at the campaign and account level. It doesn't link individual optimization decisions — a specific bid change, a negative keyword addition — to the revenue outcomes that followed them.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- What Saddl Does Differently -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900">What Saddl AdPulse Does Differently</h2>
-                <p class="text-slate-600 mt-3">The only tool that answers "what would have happened if I hadn't made that change?"</p>
+    <section class="section-white">
+        <div class="container-v2">
+            <div style="text-align:center;margin-bottom:3rem;">
+                <h2>What Saddl AdPulse Does Differently</h2>
+                <p style="color:var(--text-secondary);margin-top:0.75rem;">The only tool that answers "what would have happened if I hadn't made that change?"</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-sky-50 rounded-2xl p-8 border border-sky-200">
-                    <div class="text-[#2A8EC9] font-semibold text-sm uppercase tracking-wider mb-4">Advantage #1</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">True Counterfactual Measurement</h3>
-                    <p class="text-slate-600 leading-relaxed">We calculate a market baseline — what your account would have done without your optimization. Then we compare actual results to that baseline. The difference is your true incremental revenue: not "sales went up 8%" but "our decision added $1,400 above market."</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                <div class="method-card">
+                    <span class="eyebrow">Advantage #1</span>
+                    <h3>True Counterfactual Measurement</h3>
+                    <p>We calculate a market baseline — what your account would have done without your optimization. Then we compare actual results to that baseline. The difference is your true incremental revenue: not "sales went up 8%" but "our decision added $1,400 above market."</p>
                 </div>
-                <div class="bg-sky-50 rounded-2xl p-8 border border-sky-200">
-                    <div class="text-[#2A8EC9] font-semibold text-sm uppercase tracking-wider mb-4">Advantage #2</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Decision-Level Attribution</h3>
-                    <p class="text-slate-600 leading-relaxed">Each optimization you make gets its own measurement window. Bid adjustment on keyword X, negative keyword Y added, match type changed on campaign Z — each is tracked and attributed separately. You build a library of what works for your specific account.</p>
+                <div class="method-card">
+                    <span class="eyebrow">Advantage #2</span>
+                    <h3>Decision-Level Attribution</h3>
+                    <p>Each optimization you make gets its own measurement window. Bid adjustment on keyword X, negative keyword Y added, match type changed on campaign Z — each is tracked and attributed separately. You build a library of what works for your specific account.</p>
                 </div>
-                <div class="bg-sky-50 rounded-2xl p-8 border border-sky-200">
-                    <div class="text-[#2A8EC9] font-semibold text-sm uppercase tracking-wider mb-4">Advantage #3</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Immediate, No-API Setup</h3>
-                    <p class="text-slate-600 leading-relaxed">Unlike platforms that require API integration and onboarding time, Saddl AdPulse works from your Search Term Report export. Upload the file, get insights in minutes. Quick setup, no developer involvement.</p>
+                <div class="method-card">
+                    <span class="eyebrow">Advantage #3</span>
+                    <h3>Immediate, No-API Setup</h3>
+                    <p>Unlike platforms that require API integration and onboarding time, Saddl AdPulse works from your Search Term Report export. Upload the file, get insights in minutes. Quick setup, no developer involvement.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-24 bg-gradient-to-br from-slate-900 to-slate-950 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">Stop guessing. Start measuring.</h2>
-            <p class="text-xl text-slate-300 mb-10">Upload your Amazon Search Term Report and see exactly which decisions added revenue — and which ones were just along for the ride.</p>
-            <a href="../audit.html" class="bg-[#2A8EC9] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[#2276A8] shadow-xl inline-block">Run Free PPC Audit</a>
+    <section class="section-black">
+        <div class="container-v2" style="text-align:center;">
+            <h2 class="headline-on-dark">Stop guessing. Start measuring.</h2>
+            <p style="color:var(--text-on-dark-secondary);font-size:1.25rem;margin:1.5rem auto 2.5rem;max-width:40rem;">Upload your Amazon Search Term Report and see exactly which decisions added revenue — and which ones were just along for the ride.</p>
+            <a href="../audit.html" class="btn-primary-v2">Run Free PPC Audit</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-white font-bold text-xl mb-4">SADDL</div>
-                    <p class="text-sm mb-4">Decision intelligence for Amazon PPC</p>
-                    <div class="text-sm space-y-2">
-                        <p>6th floor, Meydan grandstand,<br>Meydan Road, Nad Al Sheba,<br>Dubai, UAE</p>
-                        <p><a href="mailto:info@saddl.io" class="hover:text-white">info@saddl.io</a></p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="../features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="../how-it-works.html" class="hover:text-white">How It Works</a></li>
-                        <li><a href="../compare.html" class="hover:text-white">Compare</a></li>
-                        <li><a href="../audit.html" class="hover:text-white">Run Free PPC Audit</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Solutions</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="../agencies.html" class="hover:text-white">For Agencies</a></li>
-                        <li><a href="../features.html" class="hover:text-white">For Sellers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="../about.html" class="hover:text-white">About</a></li>
-                        <li><a href="../faq.html" class="hover:text-white">FAQ</a></li>
-                        <li><a href="../privacy.html" class="hover:text-white">Privacy</a></li>
-                        <li><a href="../terms.html" class="hover:text-white">Terms</a></li>
-                        <li><a href="../blogs/index.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="../compare.html" class="hover:text-white">All Comparisons</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm">© 2025 Saddl AdPulse. All rights reserved.</div>
+    <footer class="footer-v2">
+      <div class="container-v2">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">SADDL<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:1px;margin-bottom:8px;"></span></div>
+            <p class="footer-tagline">Counterfactual measurement that proves the dollar impact of every Amazon PPC decision.</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.75rem;">6th floor, Meydan Grandstand, Nad Al Sheba, Dubai, UAE</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.25rem;"><a href="mailto:info@saddl.io" style="color:var(--accent);text-decoration:none;">info@saddl.io</a></p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="../features.html">Features</a></li>
+              <li><a href="../how-it-works.html">How It Works</a></li>
+              <li><a href="../agencies.html">For Agencies</a></li>
+              <li><a href="../pricing.html">Pricing</a></li>
+              <li><a href="../compare.html">Compare</a></li>
+              <li><a href="../audit.html">Free PPC Audit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../blogs/">Blog</a></li>
+              <li><a href="../faq.html">FAQ</a></li>
+              <li><a href="../careers.html">Careers</a></li>
+              <li><a href="../privacy.html">Privacy Policy</a></li>
+              <li><a href="../terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2025 Saddl Technologies. All rights reserved.</span>
+          <span class="footer-sub-tagline">Decision intelligence for Amazon agencies.</span>
+        </div>
+      </div>
     </footer>
 
     <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+      const hamburger = document.getElementById('nav-hamburger');
+      const mobileMenu = document.getElementById('nav-mobile-menu');
+      hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.setAttribute('aria-expanded', isOpen); });
+      const fadeEls = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        fadeEls.forEach(el => obs.observe(el));
+      } else { fadeEls.forEach(el => el.classList.add('visible')); }
     </script>
 </body>
 
