@@ -2,319 +2,445 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon PPC Management Software for Agencies | Saddl AdPulse</title>
-    <meta name="description"
-        content="Give every client a white-box report that proves your work added revenue. Saddl AdPulse for Amazon PPC agencies — client-ready ROI reporting.">
-    <meta name="keywords" content="amazon ppc agency software, amazon ppc management tool, amazon advertising agency tool, amazon ppc reporting for agencies">
-    <meta property="og:title" content="Amazon PPC Management Software for Agencies | Saddl AdPulse">
-    <meta property="og:description" content="Give every client a white-box report that proves your work added revenue. Saddl AdPulse for Amazon PPC agencies — client-ready ROI reporting.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saddl.io/agencies.html">
-    <meta property="og:site_name" content="Saddl AdPulse">
-    <meta property="og:image" content="https://saddl.io/assets/og-image.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon PPC Management Software for Agencies | Saddl AdPulse</title>
+  <meta name="description" content="Give every client a verified report that proves your work added revenue. Saddl AdPulse for Amazon PPC agencies — AI-powered counterfactual ROI reporting.">
+  <meta name="keywords" content="amazon ppc agency software, amazon ppc management tool, amazon advertising agency tool, amazon ppc reporting for agencies">
+  <meta property="og:title" content="Amazon PPC Management Software for Agencies | Saddl AdPulse">
+  <meta property="og:description" content="Give every client a verified report that proves your work added revenue. Saddl AdPulse for Amazon PPC agencies — AI-powered counterfactual ROI reporting.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saddl.io/agencies.html">
+  <meta property="og:site_name" content="Saddl AdPulse">
+  <meta property="og:image" content="https://saddl.io/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-v2.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body class="bg-white text-slate-900">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold text-slate-900">SADDL</a>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav-v2" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SADDL<span class="nav-logo-dot"></span></a>
+      <div class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="agencies.html" style="color: var(--accent);">Agencies</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="compare.html">Compare</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
+        <a href="audit.html" class="btn-primary-v2" style="padding: 0.625rem 1.25rem; font-size: 0.875rem;">Run Free Audit</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M3 6h16M3 11h16M3 16h16"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="nav-mobile-menu">
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="agencies.html" style="color: var(--accent);">Agencies</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="compare.html">Compare</a>
+      <div class="nav-mobile-actions">
+        <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content: center;">Login</a>
+        <a href="audit.html" class="btn-primary-v2" style="justify-content: center;">Run Free Audit</a>
+      </div>
+    </div>
+  </nav>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Compare</a>
-                    <a href="features.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Features</a>
-                    <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">How It
-                        Works</a>
-                    <a href="agencies.html" class="text-[#2A8EC9] font-medium text-sm">Agencies</a>
-                    <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">About</a>
-                    <a href="pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Pricing</a>
-                    <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">FAQ</a>
-                    <a href="audit.html"
-                        class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8]">Run
-                        Free PPC Audit</a>
-                </div>
+  <!-- ===================== HERO (dark) ===================== -->
+  <section class="section-hero">
+    <div class="hero-inner">
+      <div class="hero-badge fade-up">
+        <span class="hero-badge-dot"></span>
+        Built for Amazon Agencies
+      </div>
+      <h1 class="hero-headline fade-up fade-up-delay-1">
+        The PPC platform agencies<br><em>actually keep.</em>
+      </h1>
+      <p class="hero-subhead fade-up fade-up-delay-2">
+        Most tools help you make more changes. Saddl helps you prove which ones worked. Multi-client management, AI-powered counterfactual analysis, and client reports your clients actually understand.
+      </p>
+      <div class="hero-cta-group fade-up fade-up-delay-3">
+        <a href="bookdemo.html" class="btn-primary-v2">Book an Agency Demo</a>
+        <a href="pricing.html" class="btn-ghost-v2">See Pricing &rarr;</a>
+      </div>
+      <p class="hero-proof fade-up fade-up-delay-4">2-minute setup &nbsp;&middot;&nbsp; No engineering required &nbsp;&middot;&nbsp; Cancel anytime</p>
+    </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-slate-100 pt-4 flex flex-col gap-4">
-                <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Compare</a>
-                <a href="features.html"
-                    class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Features</a>
-                <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">How It
-                    Works</a>
-                <a href="agencies.html" class="text-[#2A8EC9] font-medium text-sm block">Agencies</a>
-                <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">About</a>
-                <a href="pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Pricing</a>
-                <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">FAQ</a>
-                <a href="https://dashboard.saddl.io/" class="flex justify-center items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    Login
-                </a>
-                <a href="audit.html"
-                    class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8] text-center block">Run
-                    Free PPC Audit</a>
-            </div>
+    <!-- Trust signal row -->
+    <div style="position: relative; z-index: 2; padding: 0 2rem 5rem; max-width: 960px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 0.625rem;">
+          <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span style="font-size: 0.875rem; color: var(--text-on-dark-secondary);">Multi-client dashboards</span>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-sky-50/30">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-block bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                For Agencies & Consultants</div>
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6">Finally, proof your clients<br><span
-                    class="text-[#2A8EC9]">can actually understand.</span></h1>
-            <p class="text-xl text-slate-600 leading-relaxed mb-10">You do great work. But proving it is hard. When
-                clients see invoices and ask "what did we get?"—you need better answers than spreadsheets and dashboards
-                they don't understand.</p>
-            <a href="bookdemo.html"
-                class="bg-slate-900 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-slate-800 transition-colors shadow-lg inline-block">Book
-                a Demo</a>
+        <div style="display: flex; align-items: center; gap: 0.625rem;">
+          <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span style="font-size: 0.875rem; color: var(--text-on-dark-secondary);">One-click client reports</span>
         </div>
-    </section>
-
-    <!-- The Agency Problem -->
-    <section class="py-24 bg-slate-900 text-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold">"What did we get for that $15k?"</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-                    <div class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-4">The Renewal Call</div>
-                    <p class="text-lg text-white mb-4">"ROAS is up 12%. ACoS is down 3 points."</p>
-                    <p class="text-slate-400 text-sm italic">Client: "Okay... but what does that mean in dollars?"</p>
-                </div>
-
-                <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700">
-                    <div class="text-sm font-mono uppercase tracking-wider text-slate-400 mb-4">The Reality</div>
-                    <p class="text-slate-300 leading-relaxed">Your clients don't think in metrics. They think in money.
-                        They want to know: <strong class="text-white">Did your work add more revenue than it
-                            cost?</strong></p>
-                </div>
-
-                <div class="bg-sky-900/30 rounded-2xl p-8 border border-sky-700/50">
-                    <div class="text-sm font-mono uppercase tracking-wider text-[#2A8EC9] mb-4">The AdPulse Answer
-                    </div>
-                    <p class="text-lg text-white mb-4">"We've saved $47k in wasted spend and driven $180k in incremental
-                        revenue."</p>
-                    <p class="text-[#2A8EC9] text-sm font-semibold">That's a conversation you can have.</p>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="compare.html"
-                    class="inline-flex items-center gap-2 text-[#2A8EC9] font-semibold hover:gap-3 transition-all">
-                    See how we measure differently
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </a>
-            </div>
+        <div style="display: flex; align-items: center; gap: 0.625rem;">
+          <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span style="font-size: 0.875rem; color: var(--text-on-dark-secondary);">Proven dollar impact, not metrics</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Agency Benefits -->
-    <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Built for how agencies actually work</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-[#2A8EC9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="14 2 14 8 20 8"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Client-Ready Reports</h3>
-                    <p class="text-slate-600">One-click PDF exports that show exactly what you did, what it cost, and
-                        what they got.</p>
-                </div>
-
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-[#2A8EC9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <line x1="12" y1="1" x2="12" y2="23" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Prove ROI at Renewal</h3>
-                    <p class="text-slate-600">"We've saved you $47k and driven $180k in incremental revenue." That's the
-                        retention conversation you want.</p>
-                </div>
-
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-[#2A8EC9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></circle>
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Cut Reporting Time 80%</h3>
-                    <p class="text-slate-600">Stop exporting spreadsheets and building pivot tables. The Impact
-                        Dashboard does it automatically.</p>
-                </div>
-
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-[#2A8EC9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="17 6 23 6 23 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Standardize Across Clients</h3>
-                    <p class="text-slate-600">Same methodology, same reports, every client. Build scalable processes.
-                    </p>
-                </div>
-            </div>
+  <!-- ===================== PAIN POINTS ===================== -->
+  <section class="section-white">
+    <div class="container-v2">
+      <div class="problem-intro">
+        <div>
+          <span class="eyebrow fade-up">The agency problem</span>
+          <h2 class="headline-section fade-up fade-up-delay-1">You're doing the work.<br>You just can't prove it.</h2>
         </div>
-    </section>
-
-    <!-- Sample Report -->
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">The report your clients actually want</h2>
-                <p class="text-slate-600">Simple. Defensible. In dollars.</p>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-                <div class="bg-slate-900 text-white p-6">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h3 class="text-xl font-bold">Client Impact Report</h3>
-                            <p class="text-slate-400 text-sm">January 2025</p>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-3xl font-bold text-[#2A8EC9]">+$47,200</div>
-                            <div class="text-sm text-slate-400">Total Verified Impact</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <div class="grid md:grid-cols-3 gap-6 mb-8">
-                        <div class="text-center p-6 bg-red-50 rounded-xl">
-                            <div class="text-2xl font-bold text-red-600 mb-1">$18,400</div>
-                            <div class="text-sm text-slate-600">Waste Blocked</div>
-                        </div>
-                        <div class="text-center p-6 bg-sky-50 rounded-xl">
-                            <div class="text-2xl font-bold text-[#2A8EC9] mb-1">$23,800</div>
-                            <div class="text-sm text-slate-600">Revenue Driven</div>
-                        </div>
-                        <div class="text-center p-6 bg-blue-50 rounded-xl">
-                            <div class="text-2xl font-bold text-blue-600 mb-1">89%</div>
-                            <div class="text-sm text-slate-600">Decisions Improved</div>
-                        </div>
-                    </div>
-                    <p class="text-slate-500 text-sm text-center">Every number traces back to a specific decision with
-                        counterfactual validation.</p>
-                </div>
-            </div>
+        <div class="fade-up fade-up-delay-2" style="padding-top: 1rem;">
+          <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.72; margin-bottom: 1.25rem;">
+            Amazon PPC agencies are drowning in work that clients can't see. Every week your team is making dozens of bid changes, keyword adjustments, and campaign optimizations — and most of it is invisible to the client paying the retainer.
+          </p>
+          <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.72;">
+            The result is a structural accountability problem: your value is real, but it's unverifiable. At renewal time, you're negotiating on narrative instead of evidence. Saddl was built to fix that with AI-powered counterfactual measurement.
+          </p>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-24 bg-gradient-to-br from-slate-900 to-slate-950 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">Ready to prove your value?</h2>
-            <p class="text-xl text-slate-300 mb-10">Join the beta and start building defensible client reports.</p>
-            <a href="bookdemo.html"
-                class="bg-[#2A8EC9] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[#2276A8] shadow-xl inline-block">Book
-                a Demo</a>
+      </div>
+      <div class="grid-3">
+        <div class="pain-card fade-up">
+          <div class="pain-card-icon red">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3>Renewal conversations feel like negotiations</h3>
+          <p>You know your work drove results. Proving it is another matter. Without a verified dollar figure, every renewal becomes a debate about whether the numbers were seasonal or your doing.</p>
         </div>
-    </section>
+        <div class="pain-card fade-up fade-up-delay-1">
+          <div class="pain-card-icon orange">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3>Reports show activity, not impact</h3>
+          <p>ACOS went from 32% to 28%. Impressive — but how much money did that save? What was the incremental revenue? Clients who think in dollars don't relate to percentages as proof of value.</p>
+        </div>
+        <div class="pain-card fade-up fade-up-delay-2">
+          <div class="pain-card-icon blue">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3>Team coordination breaks at scale</h3>
+          <p>Managing 20+ client accounts across a team means decisions fall through the cracks. Who changed what, for which client, on which date — and did it work? Without a decision log, you're managing blind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-white font-bold text-xl mb-4">SADDL</div>
-                    <p class="text-sm mb-4">Decision intelligence for Amazon PPC</p>
-                    <div class="text-sm space-y-2">
-                        <p>6th floor, Meydan grandstand,<br>Meydan Road, Nad Al Sheba,<br>Dubai, UAE</p>
-                        <p><a href="mailto:info@saddl.io" class="hover:text-white">info@saddl.io</a></p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-white">How It Works</a></li>
-                        <li><a href="compare.html" class="hover:text-white">Compare</a></li>
-                        <li><a href="audit.html" class="hover:text-white">Run Free PPC Audit</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Solutions</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="agencies.html" class="hover:text-white">For Agencies</a></li>
-                        <li><a href="features.html" class="hover:text-white">For Sellers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-                        <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
-                        <li><a href="terms.html" class="hover:text-white">Terms</a></li>
-                        <li><a href="blogs/index.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="careers.html" class="hover:text-white">Careers</a></li>
-                    </ul>
-                </div>
+  <!-- ===================== HOW SADDL HELPS — 3 feature rows ===================== -->
+
+  <!-- F1: Multi-client view -->
+  <section class="section-off-white">
+    <div class="container-v2">
+      <div class="grid-2">
+        <div class="feature-copy fade-up">
+          <span class="feature-eyebrow">Multi-Client Management</span>
+          <h2>Every client account.<br>One place, full clarity.</h2>
+          <p>The Saddl agency dashboard gives your team a single workspace across all client accounts. Filter by impact, waste, decision accuracy, or anomalies. See which accounts need attention today — before the client notices.</p>
+          <a href="features.html" class="feature-link">Explore all features &rarr;</a>
+        </div>
+        <div class="feature-visual fade-up fade-up-delay-1">
+          <div class="feature-visual-label">Agency Overview &mdash; 12 Active Accounts</div>
+          <table class="fv-table">
+            <thead>
+              <tr><th>Client</th><th>Ad Spend</th><th>Impact</th><th>Accuracy</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fv-keyword">BrightHome Co.</td>
+                <td>$18,400</td>
+                <td class="fv-positive">+$31,200</td>
+                <td>96%</td>
+              </tr>
+              <tr>
+                <td class="fv-keyword">TerraFit Outdoor</td>
+                <td>$11,250</td>
+                <td class="fv-positive">+$18,750</td>
+                <td>91%</td>
+              </tr>
+              <tr>
+                <td class="fv-keyword">LunarKitchen</td>
+                <td>$9,800</td>
+                <td class="fv-positive">+$14,620</td>
+                <td>94%</td>
+              </tr>
+              <tr>
+                <td class="fv-keyword">ApexGadgets</td>
+                <td>$22,100</td>
+                <td class="fv-negative">&minus;$2,840</td>
+                <td>72%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- F2: Client Reports -->
+  <section class="section-white">
+    <div class="container-v2">
+      <div class="grid-2 reverse-mobile">
+        <div class="feature-visual fade-up">
+          <div class="feature-visual-label">Client Impact Report &mdash; Q1 2025</div>
+          <div class="report-card-mock">
+            <div class="rcm-name">BrightHome Cookware &mdash; March Summary</div>
+            <div class="rcm-metrics">
+              <div>
+                <span class="rcm-value">$31,200</span>
+                <span class="rcm-label">Verified impact</span>
+              </div>
+              <div>
+                <span class="rcm-value g">$6,840</span>
+                <span class="rcm-label">Waste eliminated</span>
+              </div>
+              <div>
+                <span class="rcm-value">96%</span>
+                <span class="rcm-label">Accuracy</span>
+              </div>
             </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm">© 2025 Saddl AdPulse. All rights
-                reserved.</div>
+          </div>
+          <div class="report-card-mock">
+            <div class="rcm-name">TerraFit Outdoors &mdash; March Summary</div>
+            <div class="rcm-metrics">
+              <div>
+                <span class="rcm-value">$18,750</span>
+                <span class="rcm-label">Verified impact</span>
+              </div>
+              <div>
+                <span class="rcm-value g">$4,110</span>
+                <span class="rcm-label">Waste eliminated</span>
+              </div>
+              <div>
+                <span class="rcm-value">91%</span>
+                <span class="rcm-label">Accuracy</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+        <div class="feature-copy fade-up fade-up-delay-1">
+          <span class="feature-eyebrow">Client Reporting</span>
+          <h2>Reports that end the<br>renewal conversation.</h2>
+          <p>One click generates a client-ready PDF that shows the verified dollar impact of every optimization made in the period. Not ROAS. Not ACOS. The actual incremental revenue your team generated — and the waste you eliminated.</p>
+          <a href="bookdemo.html" class="feature-link">See a sample report &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+  <!-- F3: Team Workflows -->
+  <section class="section-off-white">
+    <div class="container-v2">
+      <div class="grid-2">
+        <div class="feature-copy fade-up">
+          <span class="feature-eyebrow">Team Workflows</span>
+          <h2>Decisions don't disappear<br>when you scale.</h2>
+          <p>As your roster grows, so does the complexity of keeping decisions accountable. Saddl's decision log captures every change made by every team member, with full counterfactual tracking. You always know what was done, by whom, and what it produced.</p>
+          <a href="features.html" class="feature-link">Explore team features &rarr;</a>
+        </div>
+        <div class="feature-visual fade-up fade-up-delay-1">
+          <div class="feature-visual-label">Team Decision Log &mdash; This Week</div>
+          <div class="bid-row">
+            <span class="bid-keyword">Bid +22% &ldquo;portable blender&rdquo;</span>
+            <div class="bid-change">
+              <span class="bid-from">Sarah</span>
+              <span class="bid-arrow">&rarr;</span>
+              <span class="bid-to">+$840</span>
+            </div>
+          </div>
+          <div class="bid-row">
+            <span class="bid-keyword">Neg KW batch &mdash; 14 terms</span>
+            <div class="bid-change">
+              <span class="bid-from">James</span>
+              <span class="bid-arrow">&rarr;</span>
+              <span class="bid-to">+$1,230</span>
+            </div>
+          </div>
+          <div class="bid-row">
+            <span class="bid-keyword">Campaign: Exact match expand</span>
+            <div class="bid-change">
+              <span class="bid-from">Aisha</span>
+              <span class="bid-arrow">&rarr;</span>
+              <span class="bid-to">+$2,100</span>
+            </div>
+          </div>
+          <div class="bid-row">
+            <span class="bid-keyword">Budget shift: brand +10%</span>
+            <div class="bid-change">
+              <span class="bid-from">Tom</span>
+              <span class="bid-arrow" style="color: var(--danger);">&rarr;</span>
+              <span class="bid-to" style="color: var(--danger);">&minus;$310</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROOF NUMBERS ===================== -->
+  <section class="section-dark">
+    <div class="container-v2">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow fade-up">The numbers</span>
+        <h2 class="headline-section headline-on-dark fade-up fade-up-delay-1" style="max-width: 580px; margin: 0 auto;">What agencies see in the<br>first 90 days.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="agency-stat-card fade-up">
+          <div class="agency-stat-value">$47K</div>
+          <div class="agency-stat-label">Average waste identified</div>
+          <div class="agency-stat-sub">Per account. Surfaced in the free audit — before a single paid decision is made.</div>
+        </div>
+        <div class="agency-stat-card fade-up fade-up-delay-1">
+          <div class="agency-stat-value">$180K</div>
+          <div class="agency-stat-label">Average impact proven</div>
+          <div class="agency-stat-sub">Verified incremental revenue per account over a 12-month engagement with Saddl.</div>
+        </div>
+        <div class="agency-stat-card fade-up fade-up-delay-2">
+          <div class="agency-stat-value">94%</div>
+          <div class="agency-stat-label">Decision accuracy</div>
+          <div class="agency-stat-sub">Counterfactual model predictions validated against actual account outcomes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING CALLOUT ===================== -->
+  <section class="section-white">
+    <div class="container-v2">
+      <div class="grid-2" style="gap: 4rem;">
+        <div class="fade-up">
+          <span class="eyebrow">Agency Pricing</span>
+          <h2 class="headline-section" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.25rem;">Built to scale<br>with your roster.</h2>
+          <p style="font-size: 1.0625rem; color: var(--text-secondary); line-height: 1.72; margin-bottom: 2rem;">From boutique shops managing 10 clients to established agencies with 50+ accounts, Saddl agency plans scale with you. Pay per account, not per feature.</p>
+          <a href="pricing.html" class="btn-primary-v2">See Agency Pricing</a>
+        </div>
+        <div class="fade-up fade-up-delay-1">
+          <div style="background: var(--off-white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 2.25rem;">
+            <div style="font-size: 0.8125rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem;">What's included</div>
+            <div style="display: flex; flex-direction: column; gap: 0.875rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Unlimited team members
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Multi-client agency dashboard
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                One-click client impact reports
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                AI-powered bid recommendations
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Full decision log with counterfactual
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: var(--text-secondary);">
+                <svg width="16" height="16" fill="none" stroke="var(--success)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+                Priority agency support
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="section-black has-grid" style="padding: 10rem 2rem;">
+    <div class="container-v2" style="text-align: center;">
+      <span class="eyebrow fade-up">Book a demo</span>
+      <h2 class="headline-section headline-on-dark fade-up fade-up-delay-1" style="max-width: 600px; margin: 0 auto 1.5rem;">See what Saddl looks like<br>for your agency.</h2>
+      <p style="font-size: 1.0625rem; color: var(--text-on-dark-secondary); max-width: 460px; margin: 0 auto 2.5rem; line-height: 1.7;" class="fade-up fade-up-delay-2">We'll walk through your account, show you the waste we'd surface in the free audit, and map out what verified impact looks like for your typical client roster.</p>
+      <div class="hero-cta-group fade-up fade-up-delay-3">
+        <a href="bookdemo.html" class="btn-primary-v2">Book an Agency Demo</a>
+        <a href="pricing.html" class="btn-ghost-v2">See Pricing &rarr;</a>
+      </div>
+      <p class="hero-proof fade-up fade-up-delay-4" style="margin-top: 1.5rem;">30-minute session &nbsp;&middot;&nbsp; No commitment &nbsp;&middot;&nbsp; Free audit included</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-v2">
+    <div class="container-v2">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">SADDL<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:1px;margin-bottom:8px;"></span></div>
+          <p class="footer-tagline">Counterfactual measurement that proves the dollar impact of every Amazon PPC decision. Built for agencies that win renewals.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="agencies.html">For Agencies</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="audit.html">Free PPC Audit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs/">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2025 Saddl Technologies. All rights reserved.</span>
+        <span class="footer-sub-tagline">Decision intelligence for Amazon agencies.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileMenu = document.getElementById('nav-mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
         });
-    </script>
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      fadeEls.forEach(el => obs.observe(el));
+    } else {
+      fadeEls.forEach(el => el.classList.add('visible'));
+    }
+  </script>
 </body>
 
 </html>
