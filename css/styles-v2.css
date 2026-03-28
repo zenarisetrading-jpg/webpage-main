@@ -1297,3 +1297,9 @@ ul  { list-style: none; }
 .hiw-tag { font-size: 0.75rem; font-weight: 600; background: rgba(0,102,255,0.07); color: var(--accent); border: 1px solid rgba(0,102,255,0.15); border-radius: 100px; padding: 0.2rem 0.75rem; letter-spacing: 0.02em; }
 .hiw-tag-muted { background: rgba(0,0,0,0.04); color: var(--text-muted); border-color: var(--border-medium); }
 @media (max-width: 768px) { .hiw-step { grid-template-columns: 1fr; gap: 0.5rem; } }
+
+/* Compare Link Cards */
+.compare-link-card { display:block; background:var(--surface); border:1px solid var(--border-medium); border-radius:var(--r-lg); padding:1.5rem; text-decoration:none; transition:border-color 0.2s, background 0.2s; }
+.compare-link-card:hover { border-color:var(--accent); background:#EEF4FF; }
+.compare-link-card svg { color:var(--text-muted); transition:color 0.2s; }
+.compare-link-card:hover svg { color:var(--accent); }
