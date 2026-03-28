@@ -13,137 +13,104 @@
     <meta property="og:url" content="https://saddl.io/features.html">
     <meta property="og:site_name" content="Saddl AdPulse">
     <meta property="og:image" content="https://saddl.io/assets/og-image.png">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-v2.css">
 </head>
 
-<body class="bg-white text-slate-900">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold text-slate-900">SADDL</a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Compare</a>
-                    <a href="features.html" class="text-[#2A8EC9] font-medium text-sm">Features</a>
-                    <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">How It
-                        Works</a>
-                    <a href="agencies.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Agencies</a>
-                    <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">About</a>
-                    <a href="pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Pricing</a>
-                    <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">FAQ</a>
-                    <a href="audit.html"
-                        class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8]">Run
-                        Free PPC Audit</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-slate-100 pt-4 flex flex-col gap-4">
-                <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Compare</a>
-                <a href="features.html" class="text-[#2A8EC9] font-medium text-sm block">Features</a>
-                <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">How It
-                    Works</a>
-                <a href="agencies.html"
-                    class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Agencies</a>
-                <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">About</a>
-                <a href="pricing.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Pricing</a>
-                <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">FAQ</a>
-                <a href="https://dashboard.saddl.io/" class="flex justify-center items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    Login
-                </a>
-                <a href="audit.html"
-                    class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8] text-center block">Run
-                    Free PPC Audit</a>
-            </div>
+    <nav class="nav-v2" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">SADDL<span class="nav-logo-dot"></span></a>
+        <div class="nav-links">
+          <a href="features.html" style="color:var(--accent);">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="agencies.html">Agencies</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="compare.html">Compare</a>
         </div>
+        <div class="nav-actions">
+          <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
+          <a href="audit.html" class="btn-primary-v2" style="padding:0.625rem 1.25rem;font-size:0.875rem;">Run Free Audit</a>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h16M3 11h16M3 16h16"/>
+          </svg>
+        </button>
+      </div>
+      <div class="nav-mobile-menu" id="nav-mobile-menu">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="agencies.html">Agencies</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="compare.html">Compare</a>
+        <div class="nav-mobile-actions">
+          <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content:center;">Login</a>
+          <a href="audit.html" class="btn-primary-v2" style="justify-content:center;">Run Free Audit</a>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-slate-50 via-white to-sky-50/30">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6">Everything you need to<br><span
-                    class="text-[#2A8EC9]">optimize profitably.</span></h1>
-            <p class="text-xl text-slate-600 leading-relaxed">AdPulse combines optimization recommendations with impact
-                measurement—so you can make changes with confidence and know what actually worked.</p>
+    <section class="section-hero">
+        <div class="container-v2" style="text-align:center;">
+            <span class="eyebrow">Platform Features</span>
+            <h1 class="headline-hero headline-on-dark fade-up">Everything you need to<br><em>optimize profitably.</em></h1>
+            <p class="fade-up" style="font-size:1.25rem;color:var(--text-on-dark-secondary);max-width:640px;margin:1.5rem auto 0;line-height:1.7;">AdPulse combines optimization recommendations with impact measurement—so you can make changes with confidence and know what actually worked.</p>
         </div>
     </section>
 
     <!-- Value Props -->
-    <section class="py-24 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="text-4xl font-bold text-[#2A8EC9] mb-4">01</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Stop the Bleeding</h3>
-                    <p class="text-slate-600">Find search terms burning money (2-3x your break-even with zero sales) and
-                        see exactly what to block.</p>
+    <section class="section-white">
+        <div class="container-v2">
+            <div class="grid-4" style="gap:1.25rem;">
+                <div class="problem-card fade-up" style="background:var(--white);border:1px solid var(--border-medium);">
+                    <div style="font-size:2.25rem;font-weight:800;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;">01</div>
+                    <h3>Stop the Bleeding</h3>
+                    <p>Find search terms burning money (2-3x your break-even with zero sales) and see exactly what to block.</p>
                 </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="text-4xl font-bold text-[#2A8EC9] mb-4">02</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Capture Hidden Winners</h3>
-                    <p class="text-slate-600">Auto-identify high-performers buried in Auto/Broad campaigns. Promote them
-                        to exact match.</p>
+                <div class="problem-card fade-up" style="background:var(--white);border:1px solid var(--border-medium);">
+                    <div style="font-size:2.25rem;font-weight:800;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;">02</div>
+                    <h3>Capture Hidden Winners</h3>
+                    <p>Auto-identify high-performers buried in Auto/Broad campaigns. Promote them to exact match.</p>
                 </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="text-4xl font-bold text-[#2A8EC9] mb-4">03</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Know What Worked</h3>
-                    <p class="text-slate-600">Every decision gets tracked. Two weeks later, see exactly how much revenue
-                        it drove—or didn't.</p>
+                <div class="problem-card fade-up" style="background:var(--white);border:1px solid var(--border-medium);">
+                    <div style="font-size:2.25rem;font-weight:800;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;">03</div>
+                    <h3>Know What Worked</h3>
+                    <p>Every decision gets tracked. Two weeks later, see exactly how much revenue it drove—or didn't.</p>
                 </div>
-                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-                    <div class="text-4xl font-bold text-[#2A8EC9] mb-4">04</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Stop Repeating Mistakes</h3>
-                    <p class="text-slate-600">Without feedback, you repeat non-working changes. AdPulse shows what
-                        didn't work.</p>
+                <div class="problem-card fade-up" style="background:var(--white);border:1px solid var(--border-medium);">
+                    <div style="font-size:2.25rem;font-weight:800;color:var(--accent);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;">04</div>
+                    <h3>Stop Repeating Mistakes</h3>
+                    <p>Without feedback, you repeat non-working changes. AdPulse shows what didn't work.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Grid -->
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Complete optimization engine + impact measurement</h2>
+    <section class="section-off-white">
+        <div class="container-v2">
+            <div style="text-align:center;margin-bottom:4rem;">
+                <span class="eyebrow">Full Feature Set</span>
+                <h2 class="headline-section fade-up">Complete optimization engine + impact measurement</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid-3" style="gap:1.5rem;">
                 <!-- Waste Detection -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:rgba(255,59,48,0.1);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="var(--danger)" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Waste Detection</h3>
-                    <p class="text-slate-600 mb-4">Find search terms burning 2-3x your target ACoS. Stop paying for
-                        clicks that never convert.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Waste Detection</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">Find search terms burning 2-3x your target ACoS. Stop paying for clicks that never convert.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• Identifies high-spend, zero-conversion terms</li>
                         <li>• Calculates exact waste amount</li>
                         <li>• Generates negative keyword bulk files</li>
@@ -151,17 +118,15 @@
                 </div>
 
                 <!-- Keyword Harvesting -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-[#2A8EC9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:var(--accent-bg);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Keyword Harvesting</h3>
-                    <p class="text-slate-600 mb-4">Auto-identify winners buried in Auto/Broad. Promote to exact match at
-                        optimal bids.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Keyword Harvesting</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">Auto-identify winners buried in Auto/Broad. Promote to exact match at optimal bids.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• Detects high-performing search terms</li>
                         <li>• Suggests optimal harvest bids</li>
                         <li>• Tracks harvest impact over 60 days</li>
@@ -169,21 +134,17 @@
                 </div>
 
                 <!-- Bid Optimization -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <line x1="12" y1="20" x2="12" y2="10" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
-                            <line x1="18" y1="20" x2="18" y2="4" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
-                            <line x1="6" y1="20" x2="6" y2="16" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:rgba(0,102,255,0.08);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24">
+                            <line x1="12" y1="20" x2="12" y2="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="18" y1="20" x2="18" y2="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="6" y1="20" x2="6" y2="16" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Bid Optimization</h3>
-                    <p class="text-slate-600 mb-4">Recommendations based on actual ROAS. Increase winners, decrease
-                        losers.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Bid Optimization</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">Recommendations based on actual ROAS. Increase winners, decrease losers.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• ROAS-based bid adjustments</li>
                         <li>• Directional validation</li>
                         <li>• Prevents over-bidding</li>
@@ -191,38 +152,34 @@
                 </div>
 
                 <!-- Impact Tracking -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="17 6 23 6 23 12"></polyline>
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:rgba(139,92,246,0.1);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="#8B5CF6" stroke-width="2" viewBox="0 0 24 24">
+                            <polyline stroke-linecap="round" stroke-linejoin="round" points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline stroke-linecap="round" stroke-linejoin="round" points="17 6 23 6 23 12"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Impact Tracking</h3>
-                    <p class="text-slate-600 mb-4">See which decisions drove revenue over 14, 30, and 60 days.</p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Impact Tracking</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">See which decisions drove revenue over 14, 30, and 60 days.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• Counterfactual analysis</li>
                         <li>• Market baseline adjustment</li>
                         <li>• Multi-horizon measurement</li>
                     </ul>
                 </div>
 
-                <!-- Forecasting -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></circle>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16v-4"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8h.01"></path>
+                <!-- Forecast Simulations (Coming Soon) -->
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:rgba(255,159,10,0.1);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="var(--warning)" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8h.01"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Forecasting</h3>
-                    <p class="text-slate-600 mb-4">Predict outcomes before making changes. Know the projected impact.
-                    </p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Forecast Simulations <span class="coming-soon-badge">Coming Soon</span></h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">Predict outcomes before making changes. Know the projected impact.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• "What if" scenarios</li>
                         <li>• Budget reallocation simulations</li>
                         <li>• Risk/reward analysis</li>
@@ -230,23 +187,18 @@
                 </div>
 
                 <!-- One-Click Exports -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
-                            <line x1="16" y1="17" x2="8" y2="17" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"></line>
+                <div class="fade-up" style="background:var(--white);border:1px solid var(--border-medium);border-radius:var(--r-xl);padding:2rem;">
+                    <div style="width:48px;height:48px;background:var(--off-white);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="var(--text-secondary)" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline stroke-linecap="round" stroke-linejoin="round" points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="16" y1="17" x2="8" y2="17" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">One-Click Exports</h3>
-                    <p class="text-slate-600 mb-4">Amazon-ready bulk files. Client-ready PDF reports. No manual work.
-                    </p>
-                    <ul class="text-sm text-slate-500 space-y-2">
+                    <h3 style="font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">One-Click Exports</h3>
+                    <p style="color:var(--text-secondary);font-size:0.9375rem;margin-bottom:1rem;">Amazon-ready bulk files. Client-ready PDF reports. No manual work.</p>
+                    <ul style="font-size:0.875rem;color:var(--text-muted);display:flex;flex-direction:column;gap:0.5rem;">
                         <li>• Bulk upload files for Amazon Ads</li>
                         <li>• PDF impact reports for clients</li>
                         <li>• CSV exports for custom analysis</li>
@@ -257,67 +209,65 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 bg-gradient-to-br from-slate-900 to-slate-950 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">See it in action</h2>
-            <a href="audit.html"
-                class="bg-[#2A8EC9] text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-[#2276A8] shadow-xl inline-block">Run
-                Free PPC Audit</a>
+    <section class="section-black" style="text-align:center;">
+        <div class="container-v2">
+            <h2 class="headline-section headline-on-dark fade-up">See it in action</h2>
+            <div style="margin-top:2.5rem;">
+                <a href="audit.html" class="btn-primary-v2">Run Free PPC Audit</a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-white font-bold text-xl mb-4">SADDL</div>
-                    <p class="text-sm mb-4">Decision intelligence for Amazon PPC</p>
-                    <div class="text-sm space-y-2">
-                        <p>6th floor, Meydan grandstand,<br>Meydan Road, Nad Al Sheba,<br>Dubai, UAE</p>
-                        <p><a href="mailto:info@saddl.io" class="hover:text-white">info@saddl.io</a></p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-white">How It Works</a></li>
-                        <li><a href="compare.html" class="hover:text-white">Compare</a></li>
-                        <li><a href="audit.html" class="hover:text-white">Run Free PPC Audit</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Solutions</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="agencies.html" class="hover:text-white">For Agencies</a></li>
-                        <li><a href="features.html" class="hover:text-white">For Sellers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-                        <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
-                        <li><a href="terms.html" class="hover:text-white">Terms</a></li>
-                        <li><a href="blogs/index.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="careers.html" class="hover:text-white">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm">© 2025 Saddl AdPulse. All rights
-                reserved.</div>
+    <footer class="footer-v2">
+      <div class="container-v2">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">SADDL<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:1px;margin-bottom:8px;"></span></div>
+            <p class="footer-tagline">Counterfactual measurement that proves the dollar impact of every Amazon PPC decision.</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.75rem;">6th floor, Meydan Grandstand, Nad Al Sheba, Dubai, UAE</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.25rem;"><a href="mailto:info@saddl.io" style="color:var(--accent);text-decoration:none;">info@saddl.io</a></p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="agencies.html">For Agencies</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="compare.html">Compare</a></li>
+              <li><a href="audit.html">Free PPC Audit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blogs/">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2025 Saddl Technologies. All rights reserved.</span>
+          <span class="footer-sub-tagline">Decision intelligence for Amazon agencies.</span>
+        </div>
+      </div>
     </footer>
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileMenu = document.getElementById('nav-mobile-menu');
+  hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.setAttribute('aria-expanded', isOpen); });
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => obs.observe(el));
+  } else { fadeEls.forEach(el => el.classList.add('visible')); }
+</script>
 </body>
-
 </html>

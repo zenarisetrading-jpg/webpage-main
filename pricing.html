@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon PPC Optimization Pricing — Plans & Free Trial | Saddl AdPulse</title>
-    <meta name="description"
-        content="Simple, transparent pricing for Amazon PPC optimization. Start free. No long-term contracts. Live in minutes. See which plan fits your ad spend.">
+    <meta name="description" content="Simple, transparent pricing for Amazon PPC optimization. Start free. No long-term contracts. Live in minutes. See which plan fits your ad spend.">
     <meta name="keywords" content="amazon ppc software pricing, amazon ppc tool cost, saddl adpulse pricing, amazon advertising software plans">
     <meta property="og:title" content="Amazon PPC Optimization Pricing — Plans & Free Trial | Saddl AdPulse">
     <meta property="og:description" content="Simple, transparent pricing for Amazon PPC optimization. Start free. No long-term contracts. Live in minutes. See which plan fits your ad spend.">
@@ -14,517 +13,390 @@
     <meta property="og:url" content="https://saddl.io/pricing.html">
     <meta property="og:site_name" content="Saddl AdPulse">
     <meta property="og:image" content="https://saddl.io/assets/og-image.png">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-v2.css">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+      /* Pricing toggle */
+      .pricing-toggle-wrap { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:2.5rem; }
+      .pricing-toggle-btn {
+        position:relative; display:inline-flex; height:32px; width:56px;
+        align-items:center; border-radius:100px;
+        background:var(--border-strong); border:none; cursor:pointer;
+        transition:background 0.2s; padding:0;
+      }
+      .pricing-toggle-btn.active { background:var(--accent); }
+      .pricing-toggle-thumb {
+        position:absolute; left:4px;
+        width:24px; height:24px; border-radius:50%;
+        background:var(--white); box-shadow:0 1px 4px rgba(0,0,0,0.2);
+        transition:transform 0.2s var(--ease-snappy);
+      }
+      .pricing-toggle-btn.active .pricing-toggle-thumb { transform:translateX(24px); }
+      .toggle-label { font-size:0.9375rem; font-weight:600; color:var(--text-muted); }
+      .toggle-label.active { color:var(--text-primary); }
 
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
+      /* Pricing cards */
+      .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1000px; margin:0 auto; }
+      .pricing-card {
+        border:1px solid var(--border-medium); border-radius:var(--r-xl);
+        padding:2rem; background:var(--white);
+        display:flex; flex-direction:column;
+        transition:box-shadow 0.2s;
+      }
+      .pricing-card:hover { box-shadow:0 8px 40px rgba(0,0,0,0.08); }
+      .pricing-card.featured {
+        border-color:var(--accent);
+        box-shadow:0 0 0 1px var(--accent), 0 8px 40px rgba(0,102,255,0.12);
+      }
+      .pricing-badge {
+        display:inline-block; font-size:0.6875rem; font-weight:700;
+        letter-spacing:0.06em; text-transform:uppercase;
+        background:var(--accent); color:#fff;
+        border-radius:100px; padding:0.25rem 0.75rem;
+        margin-bottom:1rem;
+      }
+      .pricing-name { font-size:1.125rem; font-weight:700; color:var(--text-primary); margin-bottom:0.5rem; }
+      .pricing-price { font-size:2.5rem; font-weight:800; color:var(--text-primary); letter-spacing:-0.03em; line-height:1; }
+      .pricing-period { font-size:0.9375rem; color:var(--text-muted); font-weight:400; }
+      .pricing-trial { font-size:0.875rem; font-weight:600; color:var(--accent); margin:0.5rem 0 1rem; }
+      .pricing-desc { font-size:0.9rem; color:var(--text-secondary); margin-bottom:1.5rem; }
+      .pricing-features { list-style:none; display:flex; flex-direction:column; gap:0.875rem; margin-bottom:2rem; flex:1; }
+      .pricing-features li { display:flex; align-items:flex-start; gap:0.625rem; font-size:0.9rem; color:var(--text-secondary); }
+      .pricing-features li svg { flex-shrink:0; margin-top:2px; }
+      .pricing-features .check-accent { color:var(--accent); }
+      .pricing-features .check-dark { color:var(--text-primary); }
+      .pricing-cta-secondary {
+        display:block; width:100%; padding:0.875rem 1rem;
+        background:var(--off-white); color:var(--text-primary);
+        font-weight:600; font-size:0.9375rem; text-align:center;
+        border-radius:var(--r-lg); text-decoration:none;
+        transition:background 0.2s;
+      }
+      .pricing-cta-secondary:hover { background:var(--border-medium); }
+      .pricing-cta-dark {
+        display:block; width:100%; padding:0.875rem 1rem;
+        background:var(--text-primary); color:var(--white);
+        font-weight:600; font-size:0.9375rem; text-align:center;
+        border-radius:var(--r-lg); text-decoration:none;
+        transition:background 0.2s;
+      }
+      .pricing-cta-dark:hover { background:var(--dark-3); }
 
-        /* Custom Toggle Switch */
-        .toggle-checkbox:checked {
-            right: 0;
-            border-color: #2A8EC9;
-        }
+      /* Agency grid */
+      .agency-pricing-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; max-width:820px; margin:0 auto; align-items:start; }
 
-        .toggle-checkbox:checked+.toggle-label {
-            background-color: #2A8EC9;
-        }
+      @media (max-width:768px) {
+        .pricing-grid { grid-template-columns:1fr; }
+        .agency-pricing-grid { grid-template-columns:1fr; }
+      }
     </style>
 </head>
 
-<body class="bg-white text-slate-900">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="index.html" class="text-2xl font-bold text-slate-900">SADDL</a>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Compare</a>
-                    <a href="features.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Features</a>
-                    <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">How It
-                        Works</a>
-                    <a href="agencies.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">Agencies</a>
-                    <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">About</a>
-                    <a href="pricing.html" class="text-[#2A8EC9] font-medium text-sm">Pricing</a>
-                    <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium">FAQ</a>
-                    <a href="audit.html"
-                        class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8]">Run
-                        Free PPC Audit</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-slate-100 pt-4 flex flex-col gap-4">
-                <a href="compare.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Compare</a>
-                <a href="features.html"
-                    class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Features</a>
-                <a href="how-it-works.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">How It
-                    Works</a>
-                <a href="agencies.html"
-                    class="text-slate-600 hover:text-slate-900 text-sm font-medium block">Agencies</a>
-                <a href="about.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">About</a>
-                <a href="pricing.html" class="text-[#2A8EC9] font-medium text-sm block">Pricing</a>
-                <a href="faq.html" class="text-slate-600 hover:text-slate-900 text-sm font-medium block">FAQ</a>
-                <a href="https://dashboard.saddl.io/" class="flex justify-center items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    Login
-                </a>
-                <a href="audit.html"
-                    class="bg-[#2A8EC9] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#2276A8] text-center block">Run
-                    Free PPC Audit</a>
-            </div>
+    <nav class="nav-v2" id="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">SADDL<span class="nav-logo-dot"></span></a>
+        <div class="nav-links">
+          <a href="features.html">Features</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="agencies.html">Agencies</a>
+          <a href="pricing.html" style="color:var(--accent);">Pricing</a>
+          <a href="compare.html">Compare</a>
         </div>
+        <div class="nav-actions">
+          <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
+          <a href="audit.html" class="btn-primary-v2" style="padding:0.625rem 1.25rem;font-size:0.875rem;">Run Free Audit</a>
+        </div>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 6h16M3 11h16M3 16h16"/>
+          </svg>
+        </button>
+      </div>
+      <div class="nav-mobile-menu" id="nav-mobile-menu">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="agencies.html">Agencies</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="compare.html">Compare</a>
+        <div class="nav-mobile-actions">
+          <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content:center;">Login</a>
+          <a href="audit.html" class="btn-primary-v2" style="justify-content:center;">Run Free Audit</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- Header -->
-    <section class="pt-32 pb-20 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-6">Simple pricing that<br><span class="text-[#2A8EC9]">scales
-                    with you.</span></h1>
-            <p class="text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                No hidden fees. No per-seat charges. Just results. Start for free and upgrade as you grow.
-            </p>
+    <!-- Hero -->
+    <section class="section-hero" style="padding-bottom:5rem;">
+        <div class="container-v2" style="text-align:center;">
+            <span class="eyebrow">Pricing</span>
+            <h1 class="headline-hero headline-on-dark fade-up">Simple pricing that<br><em>scales with you.</em></h1>
+            <p class="fade-up" style="font-size:1.2rem;color:var(--text-on-dark-secondary);max-width:520px;margin:1.5rem auto 0;line-height:1.7;">No hidden fees. No per-seat charges. Just results. Start for free and upgrade as you grow.</p>
 
             <!-- Toggle -->
-            <div class="mt-10 flex justify-center items-center gap-4">
-                <span class="text-sm font-semibold text-slate-900" id="seller-label">Brands</span>
-                <button id="pricing-toggle"
-                    class="relative inline-flex h-8 w-14 items-center rounded-full bg-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[#2A8EC9] focus:ring-offset-2"
-                    role="switch" aria-checked="false">
-                    <span class="sr-only">Toggle pricing view</span>
-                    <span id="toggle-circle"
-                        class="translate-x-1 inline-block h-6 w-6 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+            <div class="pricing-toggle-wrap fade-up">
+                <span class="toggle-label active" id="seller-label">Brands</span>
+                <button class="pricing-toggle-btn" id="pricing-toggle" aria-checked="false" role="switch">
+                    <span class="pricing-toggle-thumb"></span>
                 </button>
-                <span class="text-sm font-medium text-slate-500" id="agency-label">Agency / Multi-Client</span>
+                <span class="toggle-label" id="agency-label">Agency / Multi-Client</span>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- Pricing Cards -->
+    <section class="section-white" style="padding-top:4rem;">
+        <div class="container-v2">
 
-            <!-- Seller Pricing View -->
-            <div id="seller-pricing"
-                class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto transition-opacity duration-300">
-
-                <!-- Free Trial (Badge Only - applies to all) -->
+            <!-- Seller Pricing -->
+            <div id="seller-pricing" class="pricing-grid">
                 <!-- Starter -->
-                <div
-                    class="border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-shadow bg-white flex flex-col">
-                    <div class="mb-auto">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-bold text-slate-900">Starter</h3>
-                        </div>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-4xl font-bold text-slate-900">$99</span>
-                            <span class="text-slate-500 ml-2">/month</span>
-                        </div>
-                        <div class="text-sm font-semibold text-[#2A8EC9] mb-4">14-Day Free Trial</div>
-                        <p class="text-sm text-slate-600 mb-6">Up to $10K monthly ad spend.</p>
-
-                        <ul class="space-y-4 text-sm text-slate-600 mb-8">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Decision Dashboard
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Optimization Workflows
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Basic Impact Metrics
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="bookdemo.html"
-                        class="block w-full py-3 px-4 bg-slate-100 text-slate-900 font-semibold text-center rounded-lg hover:bg-slate-200 transition-colors">Start
-                        Free Trial</a>
+                <div class="pricing-card">
+                    <div class="pricing-name">Starter</div>
+                    <div class="pricing-price">$99<span class="pricing-period">/month</span></div>
+                    <div class="pricing-trial">14-Day Free Trial</div>
+                    <div class="pricing-desc">Up to $10K monthly ad spend.</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Decision Dashboard
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Optimization Workflows
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Basic Impact Metrics
+                        </li>
+                    </ul>
+                    <a href="bookdemo.html" class="pricing-cta-secondary">Start Free Trial</a>
                 </div>
 
                 <!-- Growth (Popular) -->
-                <div
-                    class="border-2 border-[#2A8EC9] rounded-2xl p-8 shadow-xl bg-white relative overflow-hidden transform md:-translate-y-4 flex flex-col">
-                    <div
-                        class="absolute top-0 right-0 bg-[#2A8EC9] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                        MOST POPULAR</div>
-                    <div class="mb-auto">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Growth</h3>
-                        <div class="flex items-baseline mb-2">
-                            <span class="text-4xl font-bold text-slate-900">$149</span>
-                            <span class="text-slate-500 ml-2">/month</span>
-                        </div>
-                        <div class="text-sm font-semibold text-[#2A8EC9] mb-4">14-Day Free Trial</div>
-                        <p class="text-sm text-slate-600 mb-6">Unlimited ad spend.</p>
-
-                        <ul class="space-y-4 text-sm text-slate-600 mb-8">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-[#2A8EC9] shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                <span class="font-medium text-slate-900">Everything in Starter</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-[#2A8EC9] shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Full Impact Dashboard
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-[#2A8EC9] shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Multi-horizon Attribution (14/30/60)
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-[#2A8EC9] shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Priority Support
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="bookdemo.html"
-                        class="block w-full py-3 px-4 bg-[#2A8EC9] text-white font-semibold text-center rounded-lg hover:bg-[#2276A8] transition-colors shadow-lg">Start
-                        Free Trial</a>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-name">Growth</div>
+                    <div class="pricing-price">$149<span class="pricing-period">/month</span></div>
+                    <div class="pricing-trial">14-Day Free Trial</div>
+                    <div class="pricing-desc">Unlimited ad spend.</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-accent"><path d="M5 13l4 4L19 7"/></svg>
+                            <strong>Everything in Starter</strong>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-accent"><path d="M5 13l4 4L19 7"/></svg>
+                            Full Impact Dashboard
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-accent"><path d="M5 13l4 4L19 7"/></svg>
+                            Multi-horizon Attribution (14/30/60)
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-accent"><path d="M5 13l4 4L19 7"/></svg>
+                            Priority Support
+                        </li>
+                    </ul>
+                    <a href="bookdemo.html" class="btn-primary-v2" style="display:block;text-align:center;">Start Free Trial</a>
                 </div>
 
                 <!-- Managed Service -->
-                <div
-                    class="border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-shadow bg-slate-50 flex flex-col">
-                    <div class="mb-auto">
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Managed Service</h3>
-                        <div class="flex items-baseline mb-2">
-                            <div class="flex flex-col">
-                                <span class="text-2xl font-bold text-slate-900">$750<span
-                                        class="text-sm font-normal text-slate-500">/mo flat</span></span>
-                                <span class="text-xs text-slate-400 font-medium">up to $10k spend</span>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-500 mb-4 italic">Above $10k: $750 + 3% of addtl spend</p>
-                        <p class="text-sm text-slate-600 mb-6">Expert management for your account.</p>
-
-                        <ul class="space-y-4 text-sm text-slate-600 mb-8">
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-slate-900 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Dedicated Account Manager
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-slate-900 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Weekly Optimization Reviews
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-slate-900 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
-                                Custom Strategy Sessions
-                            </li>
-                        </ul>
+                <div class="pricing-card" style="background:var(--off-white);">
+                    <div class="pricing-name">Managed Service</div>
+                    <div style="margin-bottom:0.25rem;">
+                        <span class="pricing-price" style="font-size:2rem;">$750<span style="font-size:0.875rem;font-weight:400;color:var(--text-muted);">/mo flat</span></span>
                     </div>
-                    <div class="mt-4 p-3 bg-slate-100 rounded text-xs text-slate-500 mb-6">
+                    <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.5rem;">up to $10k spend</div>
+                    <div style="font-size:0.8125rem;color:var(--text-muted);font-style:italic;margin-bottom:1rem;">Above $10k: $750 + 3% of addtl spend</div>
+                    <div class="pricing-desc">Expert management for your account.</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Dedicated Account Manager
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Weekly Optimization Reviews
+                        </li>
+                        <li>
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="check-dark"><path d="M5 13l4 4L19 7"/></svg>
+                            Custom Strategy Sessions
+                        </li>
+                    </ul>
+                    <div style="padding:0.875rem;background:var(--border);border-radius:var(--r-md);font-size:0.8125rem;color:var(--text-muted);margin-bottom:1.5rem;">
                         <strong>Example:</strong> $25K spend = $750 + (3% &times; $15K) = <strong>$1,200/mo</strong>
                     </div>
-                    <a href="bookdemo.html"
-                        class="block w-full py-3 px-4 bg-slate-900 text-white font-semibold text-center rounded-lg hover:bg-slate-800 transition-colors">Book
-                        Strategy Call</a>
+                    <a href="bookdemo.html" class="pricing-cta-dark">Book Strategy Call</a>
                 </div>
-
             </div>
 
-            <!-- Agency Pricing View (Initially Hidden) -->
-            <div id="agency-pricing" class="hidden max-w-5xl mx-auto transition-opacity duration-300">
-
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <!-- Pricing Card -->
-                    <div class="border-2 border-[#2A8EC9] rounded-2xl p-8 shadow-xl bg-white relative overflow-hidden">
-                        <div
-                            class="absolute top-0 right-0 bg-[#2A8EC9] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                            AGENCY PLAN</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6">Agency Partner</h3>
-
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+            <!-- Agency Pricing (hidden by default) -->
+            <div id="agency-pricing" style="display:none;">
+                <div class="agency-pricing-grid">
+                    <!-- Card -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Agency Plan</div>
+                        <div class="pricing-name">Agency Partner</div>
+                        <div style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:1.5rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1rem;border-bottom:1px solid var(--border);">
                                 <div>
-                                    <div class="font-bold text-lg text-slate-900">Platform Access</div>
-                                    <div class="text-sm text-slate-500">Workspace & Dashboard</div>
+                                    <div style="font-weight:700;color:var(--text-primary);">Platform Access</div>
+                                    <div style="font-size:0.8125rem;color:var(--text-muted);">Workspace &amp; Dashboard</div>
                                 </div>
-                                <div class="text-3xl font-bold text-slate-900">$499<span
-                                        class="text-base text-slate-500 font-normal">/mo</span></div>
+                                <div class="pricing-price" style="font-size:2rem;">$499<span style="font-size:0.875rem;font-weight:400;color:var(--text-muted);">/mo</span></div>
                             </div>
-
-                            <div class="flex justify-between items-baseline pb-2">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;">
                                 <div>
-                                    <div class="font-bold text-lg text-slate-900">Client Fee</div>
-                                    <div class="text-sm text-slate-500">Per active client</div>
+                                    <div style="font-weight:700;color:var(--text-primary);">Client Fee</div>
+                                    <div style="font-size:0.8125rem;color:var(--text-muted);">Per active client</div>
                                 </div>
-                                <div class="text-3xl font-bold text-slate-900">+$79<span
-                                        class="text-base text-slate-500 font-normal">/mo</span></div>
+                                <div class="pricing-price" style="font-size:2rem;">+$79<span style="font-size:0.875rem;font-weight:400;color:var(--text-muted);">/mo</span></div>
                             </div>
                         </div>
-
-                        <div class="mt-6 p-4 bg-slate-50 rounded-lg text-center">
-                            <div class="text-sm text-slate-500 mb-1">Example Calculation (10 Clients)</div>
-                            <div class="text-lg font-mono text-slate-700">$499 + ($79 &times; 10) = <strong
-                                    class="text-slate-900">$1,289/mo</strong></div>
+                        <div style="background:var(--off-white);border-radius:var(--r-md);padding:1rem;text-align:center;margin-bottom:1.5rem;">
+                            <div style="font-size:0.8125rem;color:var(--text-muted);margin-bottom:0.25rem;">Example Calculation (10 Clients)</div>
+                            <div style="font-family:'JetBrains Mono',monospace;color:var(--text-primary);">$499 + ($79 &times; 10) = <strong>$1,289/mo</strong></div>
                         </div>
-
-                        <a href="agencies.html"
-                            class="block w-full mt-8 py-3 px-4 bg-[#2A8EC9] text-white font-semibold text-center rounded-lg hover:bg-[#2276A8] transition-colors shadow-lg">Book
-                            Agency Demo</a>
+                        <a href="agencies.html" class="btn-primary-v2" style="display:block;text-align:center;">Book Agency Demo</a>
                     </div>
 
-                    <!-- Features List -->
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6">Everything you need to scale your agency</h3>
-                        <p class="text-slate-600 mb-8 text-lg">One simple plan. All features included for every client.
-                            No hidden fees.</p>
-
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <div class="bg-indigo-100 rounded-full p-1 mt-0.5">
-                                    <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
+                    <!-- Features -->
+                    <div style="padding:1.5rem 0;">
+                        <h3 style="font-size:1.375rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">Everything you need to scale your agency</h3>
+                        <p style="color:var(--text-secondary);margin-bottom:2rem;">One simple plan. All features included for every client. No hidden fees.</p>
+                        <ul style="display:flex;flex-direction:column;gap:1.25rem;">
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                                    <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">White-label Reports</span>
-                                    <p class="text-sm text-slate-600">Client-ready PDFs with your branding.</p>
-                                </div>
+                                <div><strong style="color:var(--text-primary);">White-label Reports</strong><p style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.125rem;">Client-ready PDFs with your branding.</p></div>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <div class="bg-indigo-100 rounded-full p-1 mt-0.5">
-                                    <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                                    <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">Client Scorecards</span>
-                                    <p class="text-sm text-slate-600">At-a-glance health metrics for your entire
-                                        portfolio.</p>
-                                </div>
+                                <div><strong style="color:var(--text-primary);">Client Scorecards</strong><p style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.125rem;">At-a-glance health metrics for your entire portfolio.</p></div>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <div class="bg-indigo-100 rounded-full p-1 mt-0.5">
-                                    <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                                    <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">Impact Attribution</span>
-                                    <p class="text-sm text-slate-600">Prove the value of your optimizations with data.
-                                    </p>
-                                </div>
+                                <div><strong style="color:var(--text-primary);">Impact Attribution</strong><p style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.125rem;">Prove the value of your optimizations with data.</p></div>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <div class="bg-indigo-100 rounded-full p-1 mt-0.5">
-                                    <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 13l4 4L19 7" />
-                                    </svg>
+                            <li style="display:flex;align-items:flex-start;gap:0.75rem;">
+                                <div style="width:28px;height:28px;border-radius:50%;background:var(--accent-bg);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                                    <svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
                                 </div>
-                                <div>
-                                    <span class="font-bold text-slate-900">Unlimited Team Members</span>
-                                    <p class="text-sm text-slate-600">Bring your whole team without extra costs.</p>
-                                </div>
+                                <div><strong style="color:var(--text-primary);">Unlimited Team Members</strong><p style="font-size:0.875rem;color:var(--text-secondary);margin-top:0.125rem;">Bring your whole team without extra costs.</p></div>
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Amazon Cost Disclosure -->
-            <div class="max-w-4xl mx-auto mt-16 text-center">
-                <p
-                    class="text-sm text-slate-500 italic bg-slate-50 inline-block px-4 py-2 rounded-lg border border-slate-200">
-                    <strong>Note:</strong> All pricing excludes Amazon advertising costs, which are paid directly to
-                    Amazon.
+            <!-- Disclosure -->
+            <div style="text-align:center;margin-top:3rem;">
+                <p style="font-size:0.875rem;color:var(--text-muted);font-style:italic;display:inline-block;padding:0.625rem 1.25rem;background:var(--off-white);border-radius:var(--r-lg);border:1px solid var(--border);">
+                    <strong>Note:</strong> All pricing excludes Amazon advertising costs, which are paid directly to Amazon.
                 </p>
             </div>
-
         </div>
     </section>
 
-    <!-- FAQ CTA -->
-    <section class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">Questions about pricing?</h2>
-            <p class="text-lg text-slate-600 mb-8">We've got answers. Check out our frequently asked questions.</p>
-            <a href="faq.html"
-                class="text-[#2A8EC9] font-semibold text-lg hover:underline inline-flex items-center gap-2">
+    <!-- FAQ link -->
+    <section class="section-off-white" style="padding:5rem 2rem;text-align:center;">
+        <div class="container-v2">
+            <h2 style="font-size:2rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">Questions about pricing?</h2>
+            <p style="font-size:1.125rem;color:var(--text-secondary);margin-bottom:2rem;">We've got answers. Check out our frequently asked questions.</p>
+            <a href="faq.html" style="color:var(--accent);font-weight:600;font-size:1.0625rem;display:inline-flex;align-items:center;gap:0.5rem;">
                 Visit FAQ
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-white font-bold text-xl mb-4">SADDL</div>
-                    <p class="text-sm mb-4">Decision intelligence for Amazon PPC</p>
-                    <div class="text-sm space-y-2">
-                        <p>6th floor, Meydan grandstand,<br>Meydan Road, Nad Al Sheba,<br>Dubai, UAE</p>
-                        <p><a href="mailto:info@saddl.io" class="hover:text-white">info@saddl.io</a></p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Product</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="how-it-works.html" class="hover:text-white">How It Works</a></li>
-                        <li><a href="compare.html" class="hover:text-white">Compare</a></li>
-                        <li><a href="audit.html" class="hover:text-white">Run Free PPC Audit</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Solutions</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="agencies.html" class="hover:text-white">For Agencies</a></li>
-                        <li><a href="features.html" class="hover:text-white">For Sellers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
-                        <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
-
-                        <li><a href="terms.html" class="hover:text-white">Terms</a></li>
-                        <li><a href="blogs/index.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="careers.html" class="hover:text-white">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-sm">
-                © 2025 Saddl AdPulse. All rights reserved.
+    <!-- CTA -->
+    <section class="section-black" style="text-align:center;">
+        <div class="container-v2">
+            <h2 class="headline-section headline-on-dark fade-up">Start your free trial today</h2>
+            <div style="margin-top:2.5rem;">
+                <a href="bookdemo.html" class="btn-primary-v2">Book a Demo</a>
             </div>
         </div>
+    </section>
+
+    <footer class="footer-v2">
+      <div class="container-v2">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">SADDL<span style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:1px;margin-bottom:8px;"></span></div>
+            <p class="footer-tagline">Counterfactual measurement that proves the dollar impact of every Amazon PPC decision.</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.75rem;">6th floor, Meydan Grandstand, Nad Al Sheba, Dubai, UAE</p>
+            <p style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.25rem;"><a href="mailto:info@saddl.io" style="color:var(--accent);text-decoration:none;">info@saddl.io</a></p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="agencies.html">For Agencies</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="compare.html">Compare</a></li>
+              <li><a href="audit.html">Free PPC Audit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blogs/">Blog</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">&copy; 2025 Saddl Technologies. All rights reserved.</span>
+          <span class="footer-sub-tagline">Decision intelligence for Amazon agencies.</span>
+        </div>
+      </div>
     </footer>
 
-    <!-- Interactive Toggle Script -->
-    <script>
-        const sellerPricing = document.getElementById('seller-pricing');
-        const agencyPricing = document.getElementById('agency-pricing');
-        const toggleBtn = document.getElementById('pricing-toggle');
-        const toggleCircle = document.getElementById('toggle-circle');
-        const sellerLabel = document.getElementById('seller-label');
-        const agencyLabel = document.getElementById('agency-label');
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+  const hamburger = document.getElementById('nav-hamburger');
+  const mobileMenu = document.getElementById('nav-mobile-menu');
+  hamburger.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('open'); hamburger.setAttribute('aria-expanded', isOpen); });
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(el => obs.observe(el));
+  } else { fadeEls.forEach(el => el.classList.add('visible')); }
 
-        let isAgency = false;
-
-        toggleBtn.addEventListener('click', () => {
-            isAgency = !isAgency;
-
-            // Toggle visual state of button
-            if (isAgency) {
-                toggleCircle.classList.add('translate-x-7');
-                toggleCircle.classList.remove('translate-x-1');
-                toggleBtn.classList.add('bg-[#2A8EC9]');
-                toggleBtn.classList.remove('bg-slate-200');
-
-                // Active Label
-                agencyLabel.classList.add('text-slate-900');
-                agencyLabel.classList.remove('text-slate-500');
-                sellerLabel.classList.remove('text-slate-900');
-                sellerLabel.classList.add('text-slate-500');
-
-                // Show/Hide Content
-                sellerPricing.classList.add('hidden');
-                agencyPricing.classList.remove('hidden');
-            } else {
-                toggleCircle.classList.add('translate-x-1');
-                toggleCircle.classList.remove('translate-x-7');
-                toggleBtn.classList.remove('bg-[#2A8EC9]');
-                toggleBtn.classList.add('bg-slate-200');
-
-                // Active Label
-                sellerLabel.classList.add('text-slate-900');
-                sellerLabel.classList.remove('text-slate-500');
-                agencyLabel.classList.remove('text-slate-900');
-                agencyLabel.classList.add('text-slate-500');
-
-                // Show/Hide Content
-                sellerPricing.classList.remove('hidden');
-                agencyPricing.classList.add('hidden');
-            }
-        });
-    </script>
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+  // Pricing toggle
+  const toggleBtn = document.getElementById('pricing-toggle');
+  const sellerPricing = document.getElementById('seller-pricing');
+  const agencyPricing = document.getElementById('agency-pricing');
+  const sellerLabel = document.getElementById('seller-label');
+  const agencyLabel = document.getElementById('agency-label');
+  let isAgency = false;
+  toggleBtn.addEventListener('click', () => {
+    isAgency = !isAgency;
+    toggleBtn.classList.toggle('active', isAgency);
+    toggleBtn.setAttribute('aria-checked', isAgency);
+    sellerPricing.style.display = isAgency ? 'none' : 'grid';
+    agencyPricing.style.display = isAgency ? 'block' : 'none';
+    sellerLabel.classList.toggle('active', !isAgency);
+    agencyLabel.classList.toggle('active', isAgency);
+  });
+</script>
 </body>
-
 </html>
