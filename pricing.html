@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-v2.css">
+<<<<<<< HEAD
     <style>
       /* Pricing toggle */
       .pricing-toggle-wrap { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:2.5rem; }
@@ -37,6 +38,33 @@
       .pricing-toggle-btn.active .pricing-toggle-thumb { transform:translateX(24px); }
       .toggle-label { font-size:0.9375rem; font-weight:600; color:var(--text-muted); }
       .toggle-label.active { color:var(--text-primary); }
+=======
+    <link rel="canonical" href="https://saddl.io/pricing.html" />
+    <style>
+      /* Pricing toggle */
+      .pricing-toggle-wrap { display:flex; justify-content:center; align-items:center; gap:1.25rem; margin-top:3rem; }
+      .pricing-toggle-btn {
+        position:relative; display:inline-flex; height:32px; width:60px;
+        align-items:center; border-radius:100px;
+        background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); cursor:pointer;
+        transition:all 0.3s var(--ease-snappy); padding:0;
+      }
+      .pricing-toggle-btn.active { background:var(--accent); border-color:var(--accent); }
+      .pricing-toggle-btn:hover { border-color:rgba(255,255,255,0.3); }
+      .pricing-toggle-btn.active:hover { background:var(--accent-hover); }
+      
+      .pricing-toggle-thumb {
+        position:absolute; left:4px;
+        width:22px; height:22px; border-radius:50%;
+        background:var(--white); box-shadow:0 2px 4px rgba(0,0,0,0.3);
+        transition:transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .pricing-toggle-btn.active .pricing-toggle-thumb { transform:translateX(28px); }
+      
+      .toggle-label { font-size:1rem; font-weight:600; color:var(--text-on-dark-secondary); transition:color 0.2s; cursor:pointer; }
+      .toggle-label.active { color:var(--white); }
+      .toggle-label:hover { color:var(--white); }
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
 
       /* Pricing cards */
       .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1000px; margin:0 auto; }
@@ -106,6 +134,10 @@
           <a href="agencies.html">Agencies</a>
           <a href="pricing.html" style="color:var(--accent);">Pricing</a>
           <a href="compare.html">Compare</a>
+<<<<<<< HEAD
+=======
+          <a href="blogs/index.html">Blog</a>
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
         </div>
         <div class="nav-actions">
           <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
@@ -123,6 +155,10 @@
         <a href="agencies.html">Agencies</a>
         <a href="pricing.html">Pricing</a>
         <a href="compare.html">Compare</a>
+<<<<<<< HEAD
+=======
+        <a href="blogs/index.html">Blog</a>
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
         <div class="nav-mobile-actions">
           <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content:center;">Login</a>
           <a href="audit.html" class="btn-primary-v2" style="justify-content:center;">Run Free Audit</a>
@@ -139,11 +175,19 @@
 
             <!-- Toggle -->
             <div class="pricing-toggle-wrap fade-up">
+<<<<<<< HEAD
                 <span class="toggle-label active" id="seller-label">Brands</span>
                 <button class="pricing-toggle-btn" id="pricing-toggle" aria-checked="false" role="switch">
                     <span class="pricing-toggle-thumb"></span>
                 </button>
                 <span class="toggle-label" id="agency-label">Agency / Multi-Client</span>
+=======
+                <span class="toggle-label" id="seller-label">Brands</span>
+                <button class="pricing-toggle-btn active" id="pricing-toggle" aria-checked="true" role="switch">
+                    <span class="pricing-toggle-thumb"></span>
+                </button>
+                <span class="toggle-label active" id="agency-label">Agency / Multi-Client</span>
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
             </div>
         </div>
     </section>
@@ -152,8 +196,13 @@
     <section class="section-white" style="padding-top:4rem;">
         <div class="container-v2">
 
+<<<<<<< HEAD
             <!-- Seller Pricing -->
             <div id="seller-pricing" class="pricing-grid">
+=======
+            <!-- Seller Pricing (hidden by default) -->
+            <div id="seller-pricing" class="pricing-grid" style="display:none;">
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
                 <!-- Starter -->
                 <div class="pricing-card">
                     <div class="pricing-name">Starter</div>
@@ -235,8 +284,13 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
             <!-- Agency Pricing (hidden by default) -->
             <div id="agency-pricing" style="display:none;">
+=======
+            <!-- Agency Pricing -->
+            <div id="agency-pricing" style="display:block;">
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
                 <div class="agency-pricing-grid">
                     <!-- Card -->
                     <div class="pricing-card featured">
@@ -354,7 +408,11 @@
             <h4>Company</h4>
             <ul>
               <li><a href="about.html">About</a></li>
+<<<<<<< HEAD
               <li><a href="blogs/">Blog</a></li>
+=======
+              <li><a href="blogs/index.html">Blog</a></li>
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
               <li><a href="faq.html">FAQ</a></li>
               <li><a href="careers.html">Careers</a></li>
               <li><a href="privacy.html">Privacy Policy</a></li>
@@ -387,7 +445,12 @@
   const agencyPricing = document.getElementById('agency-pricing');
   const sellerLabel = document.getElementById('seller-label');
   const agencyLabel = document.getElementById('agency-label');
+<<<<<<< HEAD
   let isAgency = false;
+=======
+  let isAgency = true; // Set to true by default to highlight Agency / Multi-Client
+  
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
   toggleBtn.addEventListener('click', () => {
     isAgency = !isAgency;
     toggleBtn.classList.toggle('active', isAgency);
@@ -397,6 +460,13 @@
     sellerLabel.classList.toggle('active', !isAgency);
     agencyLabel.classList.toggle('active', isAgency);
   });
+<<<<<<< HEAD
+=======
+
+  // Allow clicking labels to toggle
+  sellerLabel.addEventListener('click', () => { if(isAgency) toggleBtn.click(); });
+  agencyLabel.addEventListener('click', () => { if(!isAgency) toggleBtn.click(); });
+>>>>>>> 5e2f190 (Initialize project: V2 design system, fixed blog navigation, modernized legal pages, and reorganized file structure)
 </script>
 </body>
 </html>
