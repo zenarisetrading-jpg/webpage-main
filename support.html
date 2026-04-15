@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & Help Center | Saddl AdPulse</title>
+  <meta name="description"
+    content="Get direct support from Amazon PPC experts or find answers in our help center. We're here to help you grow your Amazon business.">
+  <meta name="keywords"
+    content="saddl adpulse support, amazon ad help, contact saddl, amazon ppc experts, help center">
+  <meta property="og:title" content="Support & Help Center | Saddl AdPulse">
+  <meta property="og:description"
+    content="Get direct support from Amazon PPC experts or find answers in our help center.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saddl.io/support.html">
+  <meta property="og:site_name" content="Saddl AdPulse">
+  <meta property="og:image" content="https://saddl.io/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-v2.css">
+  <link rel="stylesheet" href="css/support-styles.css">
+  <link rel="canonical" href="https://saddl.io/support.html" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--r-lg);
+      padding: 1.5rem 2rem;
+      transition: all 0.3s var(--ease-out);
+      cursor: pointer;
+    }
+
+    .faq-item:hover {
+      border-color: var(--accent-light);
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.04);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .faq-question h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .faq-toggle-icon {
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.open .faq-toggle-icon {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease-out), margin 0.4s var(--ease-out);
+      margin-top: 0;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      margin-top: 1.25rem;
+    }
+
+    .faq-answer p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav-v2" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">SADDL<span class="nav-logo-dot"></span></a>
+      <div class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="agencies.html">Agencies</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="compare.html">Compare</a>
+        <a href="blogs/index.html">Blog</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://dashboard.saddl.io/" class="nav-login">Login</a>
+        <a href="audit.html" class="btn-primary-v2" style="padding: 0.625rem 1.25rem; font-size: 0.875rem;">Run Free
+          Audit</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M3 6h16M3 11h16M3 16h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="nav-mobile-menu">
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="agencies.html">Agencies</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="compare.html">Compare</a>
+      <a href="blogs/index.html">Blog</a>
+      <div class="nav-mobile-actions">
+        <a href="https://dashboard.saddl.io/" class="btn-outline-v2" style="justify-content: center;">Login</a>
+        <a href="audit.html" class="btn-primary-v2" style="justify-content: center;">Run Free Audit</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="section-hero" style="padding-bottom: 5rem;">
+    <div class="hero-inner">
+      <div class="hero-badge fade-up">
+        <span class="hero-badge-dot"></span>
+        Saddl Support Center
+      </div>
+      <h1 class="hero-headline fade-up fade-up-delay-1">
+        How can we<br><em>help you today?</em>
+      </h1>
+      <p class="hero-subhead fade-up fade-up-delay-2">
+        Get direct assistance from our technical team or explore our help center for answers to common questions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPORT SECTION (NOW FIRST) ===================== -->
+  <section class="section-support" id="support" style="padding-top: 5.5rem;">
+    <div class="container-v2">
+      <div class="support-card fade-up">
+        <div class="support-content">
+          <span class="eyebrow">Direct Support</span>
+          <h2 class="headline-feature">Contact our technical team</h2>
+          <p>Our team of Amazon PPC experts is ready to help you unlock the full potential of your data. Whether it's a
+            technical question or a strategy review, we're just a message away.</p>
+          <div class="support-actions">
+            <a href="mailto:tech@saddl.io" class="btn-primary-v2">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Contact Support
+            </a>
+            <a href="bookdemo.html" class="btn-outline-v2">Book a Strategy Call</a>
+          </div>
+        </div>
+        <div class="support-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Response Time</h4>
+              <p>Under 24 hours</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Global Coverage</h4>
+              <p>Dubai, IST timezones</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ SECTION (NOW SECOND) ===================== -->
+  <section class="section-off-white" id="faq">
+    <div class="container-v2">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="eyebrow">Help Center</span>
+        <h2 class="headline-section">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-grid">
+        <!-- Question 1 -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>What exactly is counterfactual measurement?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Counterfactual measurement is the gold standard of causal inference. Instead of just looking at what
+              happened (ROAS), we model what *would have happened* if you hadn't made a specific change. The difference
+              between the actual revenue and the counterfactual baseline is your true incremental impact.</p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item fade-up fade-up-delay-1">
+          <div class="faq-question">
+            <h3>Is Saddl AdPulse an automation tool?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>We are a measurement and decision intelligence platform. While we provide bid adjustment
+              recommendations and harvest winners automatically, our core value is the Accountability Loop—showing you
+              exactly which of those automations (and your manual changes) actually made money.</p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item fade-up fade-up-delay-2">
+          <div class="faq-question">
+            <h3>How long does it take to see the first results?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>You'll see historical analysis within 10 minutes of connecting your Amazon account. For live
+              decision-tracking, AdPulse needs about 72 hours of data to establish a high-confidence baseline for new
+              optimizations.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>Do you support Amazon UAE and Saudi Arabia?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. As a company based in Dubai, we have full support for Amazon AE and SA, alongside major global
+              marketplaces like USA, UK, and Europe. Our models are specifically tuned for both high-velocity and
+              emerging marketplace dynamics.</p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>How does the agency white-label reporting work?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Agencies can generate PDF reports with their own branding that focus on "Proven Impact." Instead of
+              confusing clients with ROAS fluctuations, you show them the verified dollar amount your agency added to
+              their bottom line this month.</p>
+          </div>
+        </div>
+
+        <!-- Billing & Cancellation Header -->
+        <div style="margin-top: 4rem; margin-bottom: 2rem; text-align: center;" class="fade-up">
+          <span class="eyebrow">Billing & Policies</span>
+          <h2 class="headline-feature">Subscription & Cancellation</h2>
+        </div>
+
+        <!-- Question 6: Billing -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>How does billing work?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>Saddl AdPulse is billed monthly with a minimum three-month commitment to ensure enough time for our AI to establish baselines and prove ROI. For agency partners, client fees are consolidated into a single monthly invoice.</p>
+          </div>
+        </div>
+
+        <!-- Question 7: Cancellation -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>Can I cancel my subscription?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>You can cancel your subscription at any time after your initial three-month minimum term directly through the dashboard. Once the commitment period is met, your account switches to a standard month-to-month plan.</p>
+          </div>
+        </div>
+
+        <!-- Question 8: Refunds -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>What is your refund policy?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>We offer a 14-day free trial on all plans to ensure AdPulse is the right fit for your business. Once a billing cycle has been processed, we do not offer prorated refunds, but you will retain full access to the platform for the remainder of the month.</p>
+          </div>
+        </div>
+
+        <!-- Question 9: Payment Methods -->
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <h3>What payment methods do you accept?</h3>
+            <svg class="faq-toggle-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div class="faq-answer">
+            <p>We accept all major credit cards including Visa, Mastercard, and American Express. For established agency partners with high client volume, we also offer bank transfer (ACH/Wire) options and custom billing cycles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-v2">
+    <div class="container-v2">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">SADDL<span
+              style="display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-left:1px;margin-bottom:8px;"></span>
+          </div>
+          <p class="footer-tagline">Counterfactual measurement that proves the dollar impact of every Amazon PPC
+            decision. Built for agencies that win renewals.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="agencies.html">For Agencies</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="audit.html">Free PPC Audit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs/index.html">Blog</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2025 Saddl Technologies. All rights reserved.</span>
+        <span class="footer-sub-tagline">Decision intelligence for Amazon agencies.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll behavior
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile nav toggle
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileMenu = document.getElementById('nav-mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        // Close all others
+        document.querySelectorAll('.faq-item').forEach(other => other.classList.remove('open'));
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // FadeUp via IntersectionObserver
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      fadeEls.forEach(el => obs.observe(el));
+    } else {
+      fadeEls.forEach(el => el.classList.add('visible'));
+    }
+  </script>
+</body>
+
+</html>

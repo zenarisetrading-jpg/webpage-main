@@ -1,0 +1,142 @@
+/* ============================================================
+   SUPPORT SECTION STYLES
+   ============================================================ */
+
+.section-support {
+  padding: 8rem 2rem;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.support-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--dark);
+  border-radius: var(--r-xl);
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+}
+
+/* Background effects for support card */
+.support-card::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.support-content {
+  position: relative;
+  z-index: 2;
+}
+
+.support-content h2 {
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.support-content p {
+  color: var(--text-on-dark-secondary);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.support-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.support-info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  padding-left: 4rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.support-card:hover .info-icon {
+  background: rgba(0, 102, 255, 0.1);
+  border-color: rgba(0, 102, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.info-item h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  font-size: 1.0625rem;
+  color: var(--text-on-dark-secondary);
+  margin: 0;
+}
+
+/* Responsive Support Section */
+@media (max-width: 991px) {
+  .support-card {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .support-info {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .support-info {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .support-actions {
+    flex-direction: column;
+  }
+}
